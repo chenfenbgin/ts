@@ -5,5 +5,6 @@ const info = {
   [title1]: "程序员",
   [title2]: "老师"
 }
+console.log(info) //{ [Symbol(title)]: '程序员', [Symbol(title)]: '老师' }
 
 export {}
