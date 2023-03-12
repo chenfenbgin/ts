@@ -113,3 +113,5 @@ function getDatas<T>(value:T):T {
 }
 let myData:Config<string> = getDatas;
 myData('20')
+
+console.log('git暂存')
