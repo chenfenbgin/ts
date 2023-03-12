@@ -14,3 +14,5 @@ sum<any[]>(["abc"]);
 // 2.调用方式二: 类型推到
 console.log(sum(50));
 console.log(sum('abc'));
+
+console.log('github...')
