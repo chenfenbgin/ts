@@ -115,3 +115,37 @@ let myData:Config<string> = getDatas;
 myData('20')
 
 console.log('git暂存')
+
+// 6. 把类作为参数类型的泛型类
+class User {
+  username: string | undefined;
+  password: string | undefined;
+}
+class MysqlDb {
+  add(user: User):boolean {
+    return true;
+  }
+}
+let u = new User();
+u.username  = '张三'
+u.password = '1234'
+
+let db = new MysqlDb();
+db.add(u)
+
+// 7. 操作数据库的泛型类
+class MysqlDb1<T> {
+  add(info:T):boolean {
+    console.log(info);
+    return true;
+  }
+}
+// 想给User表增加数据
+let u1 = new User();
+u1 = {
+  username: 'chen',
+  password: 'feng'
+}
+
+let db1 = new MysqlDb1<User>()
+db.add(u1)
